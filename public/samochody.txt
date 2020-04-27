@@ -1,0 +1,18 @@
+Nissan Gtr
+gtr1
+Samochod Kamila, 560 koni fabrycznie podniesiono do 780, 2.8s do 100 km/h
+Dodge Chellenger
+hellcat1
+Samochod Rafala, 766 koni fabrycznie podniesiono do 900, 3.1s do 100 km/h
+Honda Civic X 
+civic
+Samochod Adriana, 320 koni fabrycznie podniesiono do 500, 4.2s do 100 km/h
+Seat Ibiza 
+ibiza
+Samochod Andrzeja, 220 koni fabrycznie podniesiono do 320, 5s do 100 km/h
+BMW M1
+bmw1
+Samochod Dawida, 520 koni fabrycznie podniesiono do 700, 3.5 do 100 km/h
+Toyota Supra
+supra
+Samochod Karola, 380 koni fabrycznie podniesiono do 1700, 1.2 do 100 km/h
