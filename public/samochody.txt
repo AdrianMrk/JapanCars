@@ -16,3 +16,6 @@ Samochod Dawida, 520 koni fabrycznie podniesiono do 700, 3.5 do 100 km/h
 Toyota Supra
 supra
 Samochod Karola, 380 koni fabrycznie podniesiono do 1700, 1.2 do 100 km/h
+Lamborghini
+lamb1
+Samochod Karola, 600 koni fabrycznie podniesiono do 1000, 2.8 do 100 km/h

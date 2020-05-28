@@ -17,7 +17,8 @@
   </head>
   <body>
   
-
+	<div id="progressbar"></div>
+	<div id="scrollPath"></div>
 	<div id="header">
 	</div>
 
@@ -29,7 +30,15 @@
 	
 	<div id="aboutcont">
 		<div id="about">
-		<img src="cars_pics\fest.jpg"   style="padding:0px; width:98%;" alt="brak zdjecia"/>
+		<div style="position:relative; padding:0px; width:98%;overflow:hidden">
+		<img class="toRotate" src="cars_pics\fest.jpg" style="position:relative; left:0%; width:100%";   alt="brak zdjecia"/>
+		<img class="toRotate" src="cars_pics\ibiza.jpg" style="position:absolute; left:100%; width:100%";   alt="brak zdjecia"/>
+		<img class="toRotate" src="cars_pics\bmw2.jpg" style="position:absolute; left:100%; width:100%";   alt="brak zdjecia"/>
+		<img class="toRotate" src="cars_pics\golf.jpg" style="position:absolute; left:100%; width:100%";   alt="brak zdjecia"/>
+		<img class="toRotate" src="cars_pics\supra.jpg" style="position:absolute; left:100%; width:100%";   alt="brak zdjecia"/>
+		<div id="picProgress" style="position:absolute; right:0%; width:0;top:0;height:4px;background-color:#3686ff;z-index:1;opacity:.3">
+		</div>
+		</div>
 		</div>
 		<div>
 		
@@ -48,11 +57,12 @@
 	
 	<div id="carsHeader">
 	<h1 style="position:absolute;left:50%;top:0%;transform:translate(-50%,0);">Wasze samochody</h1>
+	<div id="addButton"></div>
 	</div>
-	<div id="mainContent">
-		<div id="container">	
-		</div>
-	</div>
+				<div id="mainContent">
+					<div id="container">	
+					</div>
+				</div>
 
 	<div id="footer">
 	<div id="footerText">

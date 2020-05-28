@@ -26,7 +26,7 @@ var photos = [];
 var texts = [];
 var i;
 
-function readCar(file)
+function readFile(file)
     {
         var rawFile = new XMLHttpRequest();
         rawFile.open("GET", file, false);
@@ -44,10 +44,10 @@ function readCar(file)
         }
         rawFile.send(null);
     }
-    readCar("./samochody.txt")
+    readFile("./samochody.txt")
 	
 	
-	var a=0;
+	let a=0;
 	for (i = 0; i < lines.length ; i++) {
 		
 		 titles[i] = lines[a];
@@ -75,6 +75,7 @@ class Header extends React.Component {
       <div className="menuButton" onClick={() => this.goTo(.8,"#aboutcont")}>O nas</div>
       <div className="menuButton" onClick={() => this.goTo(1,"#carsHeader")}>Wasze Auta</div>
 	  <div className="menuButton" onClick={() => this.goTo(1.2,"#footer")}>Kontakt</div>
+	  <div id="upButton" onClick={() => this.goTo(1,"#header")}>GO  UP</div>
 	  </div>
     );
   }
@@ -90,5 +91,89 @@ ReactDOM.render(
   <Header />,
   document.getElementById('header')
 );
+
+setTimeout(() => {   
+	
+	let button = document.getElementById('upButton');
+	let progress = document.getElementById('progressbar');
+	let totalHeight = document.body.scrollHeight - window.innerHeight;
+	window.onscroll = () => {
+	let progressHeight = (window.pageYOffset / totalHeight) * 100;
+	progress.style.height = progressHeight+ "%" ;
+	
+	if(progressHeight>15)
+	{
+		button.style.opacity=".8";
+		button.style.cursor="pointer";
+	}
+	else
+	{
+		button.style.opacity="0";
+		button.style.cursor="default";
+	}
+}	}, 5);
+
+picsSlider();
+
+function picsSlider(){
+
+	var currentpic = 0;
+	var secondpic = 0;
+	var secondpic2=0;
+	var pictures = document.querySelectorAll('.toRotate');
+
+	function changePics(){
+			
+		if(currentpic<4)
+			{
+			pictures[currentpic].style.transform= "scale(0.6)";
+			pictures[currentpic].style.opacity= "0";
+			pictures[currentpic+1].style.left="0";
+			currentpic++;
+			}
+		else{
+			pictures[currentpic].style.transform= "scale(0.6)";
+			pictures[currentpic].style.opacity= "0";
+			pictures[0].style.left="0";
+			currentpic=0;
+		}
+	}
+	window.setInterval(function(){
+		  changePics();
+	}, 10000); 
+
+
+	setTimeout(() => {  window.setInterval(function(){	   
+		   if(secondpic===5)
+				secondpic=0;		
+			pictures[secondpic].style.left="100%";
+			pictures[secondpic].style.transform= "scale(1)";
+			secondpic++;
+	}, 10000); }, 20000);
+
+
+	setTimeout(() => {  window.setInterval(function(){	  
+		   if(secondpic2===5)
+				secondpic2=0;
+			pictures[secondpic2].style.opacity= "1";
+			secondpic2++;
+	}, 10000); }, 30000);
+}
+
+//Animacja postępu Slidera
+
+  var elem = document.getElementById("picProgress");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+	  pos=pos+0.6; 
+      elem.style.width = pos + 'px'; 
+    if (pos >= 600) {
+      pos = 0;
+	  elem.style.width = '0px'; }
+  }
+
+
+
 
 

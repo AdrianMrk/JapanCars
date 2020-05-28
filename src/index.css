@@ -3,17 +3,15 @@
   --contColor: #fafafa;
   --frontColor: White;
   --fontColor: Black;
-  --buttonColor: #2677d4;
-}
-
+  --buttonColor: #2677d4;}
 body{
 	background-color: var(--backColor);
 	color: var(--fontColor);
     overflow-x:hidden;
-	
-	
-}
-
+	}
+::-webkit-scrollbar{	width:0;}
+#scrollPath{z-index:10;position:fixed; top:0; right:0; width:10px; height:100%; background: rgba(255,255,255,0.05);}
+#progressbar {z-index:11;position:fixed; top:0; right:0; width:10px; height:0%; background-image:linear-gradient(#ffd775,#ed7e00)}
 #header{
 	display:block;
 	position:absolute;
@@ -24,9 +22,7 @@ body{
 	font-family:Georgia;
 	float:left;
 	font-weight:bold;
-	z-index:1;
-	
-}
+	z-index:1;}
 #mainpicture{
 	display:block;
 	position:relative;
@@ -37,9 +33,7 @@ body{
 	margin-top:-8px;
 	font-family:Georgia;
 	font-weight:bold;
-	font-size:46px;
-    
-}
+	font-size:46px;}
 
 .menuButton{
 	font-family:Georgia;
@@ -48,8 +42,7 @@ body{
 	font-size:26px;
 	padding:10px;
 	margin:5px;
-	cursor:pointer;
-	}
+	cursor:pointer;	}
 .menuButton:hover{
 	color:#545454;
 	background-color:rgba(0,0,0,0.01);
@@ -60,6 +53,7 @@ body{
   text-align: center;
   margin-top:20px;
 }
+.toRotate{transition:1.5s;width:0px;}
 .container{
 	
 	background-color:white;
@@ -73,19 +67,13 @@ body{
 	border-radius:5px;
 	}
 	
-
-
 .carImg
 {
 	max-height:232px;-webkit-filter: grayscale(100%);
-	transition:0.4s;
-}
+	transition:0.4s;}
 
 .container:hover .carImg{-webkit-filter:grayscale(0%);}
 	
-
-
-
 .carText
 {
 	position:relative;
@@ -95,11 +83,7 @@ body{
 	
 }
 
-.link {
-text-decoration:none;
-color:#545454;}
-
-
+.link {text-decoration:none; color:#545454;}
 
 #aboutcont{
 	display:block;
@@ -115,7 +99,6 @@ color:#545454;}
 }
 	
 #about{min-width:600px; float:left; padding-top:20px; width:50%}
-
 
 #carsHeader{
 	position:relative;
@@ -153,13 +136,8 @@ color:#545454;}
 
 #title{position:absolute; left:6%;top:300px;z-index:1;}
 #subtitle{position:absolute; left:6%;top:460px;font-size:38px; color:white;z-index:1;}
- 
- 
- 
- 
- 
- 
- 
+#upButton{position:fixed; right:30px;bottom:30px;width:50px;height:40px;color:#a3a3a3;border: solid 4px rgb(163, 163, 163);opacity:0;transition:0.5s;text-align:center}
+#upButton:hover{background-color:#ed7e00;opacity:1;border: solid 4px #ed7e00;color:white;}
  @media screen and (max-width: 1200px)
 {  #Mobilefooter{display:block;}
    #footer{display:none;}
@@ -173,8 +151,7 @@ color:#545454;}
   @media screen and (max-width: 830px)
 {  #title{font-size:60px;top:150px}
    #subtitle{top:250px;font-size:26px;}
-}
-  
+} 
     @media screen and (max-width: 530px)
 {  #title{font-size:34px;top:65px}
    #subtitle{top:120px;font-size:18px;}
@@ -183,4 +160,3 @@ color:#545454;}
     .menuButton{display:none;}
 	#carsHeader	{font-size:26px;}
 }
-  
